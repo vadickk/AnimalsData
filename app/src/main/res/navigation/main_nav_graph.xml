@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainNavGraph"
+    app:startDestination="@id/animalsFragment">
+
+    <fragment
+        android:id="@+id/animalsFragment"
+        android:name="com.egorsigolaev.animalsdata.screens.ui.AnimalsFragment"
+        android:label="fragment_animals"
+        tools:layout="@layout/fragment_animals" >
+
+        <action
+            android:id="@+id/actionFromAnimalsFragmentToRandomDogFragment"
+            app:destination="@id/randomDogFragment" />
+
+        <action
+            android:id="@+id/actionFromAnimalsFragmentToRandomCatFragment"
+            app:destination="@id/randomCatFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/randomDogFragment"
+        android:name="com.egorsigolaev.animalsdata.screens.ui.RandomDogFragment"
+        android:label="fragment_random_dog"
+        tools:layout="@layout/fragment_random_dog" />
+
+    <fragment
+        android:id="@+id/randomCatFragment"
+        android:name="com.egorsigolaev.animalsdata.screens.ui.RandomCatFragment"
+        android:label="fragment_random_cat"
+        tools:layout="@layout/fragment_random_cat" />
+
+
+</navigation>
